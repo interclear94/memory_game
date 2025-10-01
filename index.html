@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/init.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Poketmon Memory Game</title>
+  </head>
+  <body>
+    <div class="start-modal-bg">
+      <div class="start-modal">
+        <div class="start-modal-inner">
+          <h3>같은 포켓몬을 찾아라!</h3>
+          <p>1. 포켓몬은 20초 동안 보여줍니다.</p>
+          <p>
+            2. 카드의 짝이 일치하지 않으면 몬스터볼이 차감됩니다. 몬스터볼은 총
+            3개 입니다.
+          </p>
+          <p>3. 몬스터볼이 소진되면 게임이 끝납니다</p>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 3rem;
+            "
+          >
+            <button id="startBtn">시작하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="end-modal-bg">
+      <div class="end-modal">
+        <div class="end-text">
+          <h3>GAME OVER</h3>
+          <p>다시 도전해보세요!!</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+          "
+        >
+          <button class="resetBtn">다시 시작</button>
+        </div>
+      </div>
+    </div>
+    <div class="clear-modal-bg">
+      <div class="clear-modal">
+        <div class="end-text">
+          <h3>MISSION CLEAR</h3>
+          <p>축하합니다!!!</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+          "
+        >
+          <button class="resetBtn">다시 시작</button>
+        </div>
+      </div>
+    </div>
+    <header id="header">
+      <div class="title-area">
+        <h1>포켓몬 카드 뒤집기</h1>
+      </div>
+      <button>다시 시작</button>
+    </header>
+    <aside>
+      <span class="count"></span>
+      <div class="heart-area">
+        <p>남은 몬스터 볼</p>
+        <ol>
+          <li>
+            <button>
+              <img src="./img/ball.png" alt="목숨" />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./img/ball.png" alt="목숨" />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./img/ball.png" alt="목숨" />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./img/ball.png" alt="목숨" />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./img/ball.png" alt="목숨" />
+            </button>
+          </li>
+        </ol>
+      </div>
+    </aside>
+    <section id="section1">
+      <ul class="card_area"></ul>
+    </section>
+    <footer id="footer">
+      <div>&copy; 2025 Park Jaka. All Right Reserved</div>
+    </footer>
+  </body>
+  <script src="./js/init.js"></script>
+</html>

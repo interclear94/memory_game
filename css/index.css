@@ -1,0 +1,405 @@
+:root {
+  --header-color: green;
+  --header-height: 100px;
+  --footer-height: 100px;
+  --card-gap: 2rem;
+  --radius: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.start-modal-bg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.start-modal {
+  width: 30rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -70%);
+  border-radius: 0.8rem;
+  background: rgb(45, 130, 79);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid rgb(19, 79, 39);
+  padding: 2.5rem 2rem;
+}
+
+.start-modal-inner > h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+  color: #dedede;
+}
+
+.start-modal-inner > p {
+  margin-bottom: 10px;
+}
+
+.start-modal-inner button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: rgb(86, 142, 86);
+  color: #fff;
+  border: none;
+  border: 2px solid rgb(134, 198, 134);
+  border-radius: 0.5rem;
+  padding: 10px 10px;
+}
+
+.start-modal-inner button:hover {
+  background: rgb(40, 68, 40);
+  color: #fff;
+}
+
+.start-modal-inner p {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+/* 게임 오버 다시 도전 */
+.end-modal-bg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  color: #dedede;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-modal {
+  width: 30rem;
+  background: rgb(45, 130, 79);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 60px;
+  border-radius: 10px;
+  transform: translateY(-50px);
+  border: 4px solid rgb(19, 79, 39);
+}
+
+.end-modal > div > h3 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.end-modal > div > p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.end-modal-bg > .end-modal button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: rgb(86, 142, 86);
+  color: #fff;
+  border: none;
+  border: 2px solid rgb(134, 198, 134);
+  border-radius: 0.5rem;
+  padding: 10px 10px;
+}
+
+.end-modal-bg .end-modal button:hover {
+  background: rgb(40, 68, 40);
+  color: #fff;
+}
+
+/* 미션 클리어 */
+.clear-modal-bg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  color: #dedede;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.clear-modal {
+  width: 30rem;
+  background: rgb(45, 130, 79);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 60px;
+  border-radius: 10px;
+  transform: translateY(-50px);
+  border: 4px solid rgb(19, 79, 39);
+}
+
+.clear-modal > div > h3 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.clear-modal > div > p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.clear-modal-bg > .end-modal button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: rgb(86, 142, 86);
+  color: #fff;
+  border: none;
+  border: 2px solid rgb(134, 198, 134);
+  border-radius: 0.5rem;
+  padding: 10px 10px;
+}
+
+.clear-modal-bg .clear-modal button:hover {
+  background: rgb(40, 68, 40);
+  color: #fff;
+}
+
+/* 헤더 */
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--header-color);
+  height: var(--header-height);
+  position: relative;
+}
+
+#header > div > h1 {
+  font-size: 2.5rem;
+  color: #efefef;
+  font-weight: 700;
+}
+
+/* 다시시작하는 버튼 */
+#header > button {
+  width: 150px;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(233, 73, 73);
+  color: #dedede;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  border-radius: 0.5rem;
+}
+
+/* 새로고침 및 다시시작 */
+aside {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(109, 109, 214);
+  position: relative;
+}
+
+aside > .count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+}
+
+/* 몬스터볼 (목숨) 영역 */
+aside > .heart-area {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+aside p {
+  height: 100%;
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.heart-area > ol {
+  width: 14rem;
+  position: relative;
+  height: 3rem;
+  overflow: hidden;
+}
+
+/* 몬스터볼 (기회)ㅓ*/
+.heart-area > ol > li {
+  position: absolute;
+  width: 20%;
+}
+
+.heart-area > ol > li:nth-child(1) {
+  left: 0;
+  bottom: -8px;
+}
+.heart-area > ol > li:nth-child(2) {
+  left: 45px;
+  bottom: -8px;
+}
+.heart-area > ol > li:nth-child(3) {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+}
+.heart-area > ol > li:nth-child(4) {
+  right: 45px;
+  bottom: -8px;
+}
+.heart-area > ol > li:nth-child(5) {
+  right: 0;
+  bottom: -8px;
+}
+
+.heart-area > ol > li > button {
+  width: 100%;
+  height: 100%;
+}
+
+.heart-area > ol > li img {
+  width: 100%;
+  height: 100%;
+}
+
+#section1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 200px - 3rem);
+  background-color: rgb(109, 109, 214);
+}
+
+/* 컨텐츠 영역 */
+#section1 > .card_area {
+  background: rgb(255, 253, 243);
+  width: 90%;
+  height: 90%;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+/* 카드를 담는 li */
+.card_area > li {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  perspective: 1000px;
+  border-radius: 0.5rem;
+  border: 4px solid #dedede;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card_area > .active_hover:hover {
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10px);
+}
+
+/* /* .card_area > .active_hover {
+  transform: translateY(-10px);
+} */
+
+.card_area > .inActive_hover {
+  transform: none;
+}
+
+/* li 안에 카드 inner */
+li > .card_inner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+li > .card_inner > .card_front {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 클릭 이벤트 버블링 막음 */
+  pointer-events: none;
+}
+
+/* 카드 앞면 뒷면 */
+.card_front,
+.card_back {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+
+.card_inner img {
+  pointer-events: none;
+}
+
+.card_inner > .card_front > img {
+  width: 100px;
+}
+
+.card_inner > .card_back > img {
+  width: 100%;
+  height: 100%;
+}
+
+.card_back {
+  transform: rotateY("0deg");
+}
+
+.card_back_flip {
+  transform: rotateY("0deg");
+}
+
+/* 푸터 */
+#footer {
+  width: 100%;
+  height: var(--footer-height);
+  background: navy;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
