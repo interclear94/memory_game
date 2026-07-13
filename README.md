@@ -1,4 +1,4 @@
-# Pokémon Card Matching Game
+# Memory Game(포켓몬 카드 뒤집기 게임)
 
 HTML, CSS, Vanilla JavaScript로 구현한 같은 그림 맞추기 카드 게임입니다.
 
@@ -19,12 +19,9 @@ HTML, CSS, Vanilla JavaScript로 구현한 같은 그림 맞추기 카드 게임
 ## Preview
 
 <!-- 프로젝트 화면 캡처 이미지로 교체 -->
-
-```md
-![게임 시작 화면](./screenshots/screenshots1.png)
-![게임 진행 화면](./screenshots/screenshots2.png)
-![게임 종료 화면](./screenshots/screenshots3.png)
-```
+<img src="./screenshots/play_preview.gif" alt="게임 플레이" width="500" />
+<img src="./screenshots/screenshots1.png" alt="게임 시작 화면" width="500" />
+<img src="./screenshots/screenshots3.png" alt="게임 종료 화면" width="500" />
 
 ---
 
