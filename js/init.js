@@ -68,6 +68,8 @@ function render() {
   const pickedCardList = [];
 
   // 모든 카드 리스트 totalCardBox에 넣기
+  // 초기화를 해줘야 중복이 되는 이미지가 나오지 않음
+  totalCardBox.length = 0;
   for (let i = 1; i <= 26; i++) {
     totalCardBox.push(i);
   }
@@ -141,7 +143,7 @@ function render() {
     const li = cardUl.querySelector(`li:nth-child(${cardObjPosition + 1})`);
 
     const frontImg = cardUl.querySelector(
-      `li:nth-child(${cardObjPosition + 1}) img`
+      `li:nth-child(${cardObjPosition + 1}) img`,
     );
 
     frontImg.src = `./img/poketmon${cardObjNumber}.png`;
@@ -327,7 +329,7 @@ startBtn.addEventListener("click", function () {
   cardBack.forEach((list) =>
     list.addEventListener("click", function () {
       list.style.transform = "rotateY(180deg)";
-    })
+    }),
   );
 });
 
@@ -425,7 +427,7 @@ resetBtn.forEach((list) => {
         const heartArea = document.querySelector(".heart-area > ol");
         const heartLi = heartArea.querySelectorAll("li");
         const heart = document.querySelector(
-          ".heart-area > ol > li:last-child"
+          ".heart-area > ol > li:last-child",
         );
 
         const { pairingState } = selectedState
@@ -483,7 +485,7 @@ resetBtn.forEach((list) => {
     cardBack.forEach((list) =>
       list.addEventListener("click", function () {
         list.style.transform = "rotateY(180deg)";
-      })
+      }),
     );
   });
 });

@@ -6,12 +6,6 @@
   --radius: 0.5rem;
 }
 
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
 .start-modal-bg {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
@@ -104,18 +98,20 @@ button {
   font-weight: 600;
 }
 
-.end-modal-bg > .end-modal button {
+.end-modal .resetBtn,
+.clear-modal .resetBtn {
   font-size: 1.2rem;
   font-weight: 500;
   background: rgb(86, 142, 86);
   color: #fff;
-  border: none;
   border: 2px solid rgb(134, 198, 134);
   border-radius: 0.5rem;
   padding: 10px 10px;
+  cursor: pointer;
 }
 
-.end-modal-bg .end-modal button:hover {
+.end-modal .resetBtn:hover,
+.clear-modal .resetBtn:hover {
   background: rgb(40, 68, 40);
   color: #fff;
 }
@@ -153,22 +149,6 @@ button {
 .clear-modal > div > p {
   font-size: 2.5rem;
   font-weight: 600;
-}
-
-.clear-modal-bg > .end-modal button {
-  font-size: 1.2rem;
-  font-weight: 500;
-  background: rgb(86, 142, 86);
-  color: #fff;
-  border: none;
-  border: 2px solid rgb(134, 198, 134);
-  border-radius: 0.5rem;
-  padding: 10px 10px;
-}
-
-.clear-modal-bg .clear-modal button:hover {
-  background: rgb(40, 68, 40);
-  color: #fff;
 }
 
 /* 헤더 */
@@ -278,14 +258,13 @@ aside p {
   bottom: -8px;
 }
 
-.heart-area > ol > li > button {
-  width: 100%;
-  height: 100%;
-}
-
 .heart-area > ol > li img {
+  display: block;
   width: 100%;
   height: 100%;
+  background: none;
+  border: none;
+  object-fit: contain;
 }
 
 #section1 {
